@@ -15,8 +15,8 @@ return $username.Substring(1,$username.Length-1) ## on enlève le symbole devant
 }
 
 $time = Get-Date -f "HH:mm:ss"
-$logfile = "c:\log-connexion\$date.csv" ## emplacement du log
 $date = Get-Date -f "dd/MM/yyyy"
+$logfile = "c:\log-connexion\$date.csv" ## emplacement du log
 $compname = $env:COMPUTERNAME
 $user = getrdpuser ## appel de la fonction de récup du nom utilisateur
 $os = (Get-WmiObject Win32_OperatingSystem).Caption
